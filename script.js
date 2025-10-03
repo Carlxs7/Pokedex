@@ -1,19 +1,21 @@
 const pokeContainer = document.querySelector("#pokeContainer");
-const pokemonCount = 50
+const pokemonCount = 1000
 const colors = {
-    fire: '#FDDFDF',
-    grass: '#DEFDE0',
-    electric: '#FCF7DE',
-    water: '#DEF3FD',
-    ground: '#f4e7da',
-    rock: '#d5d5d4',
-    fairy: '#fceaff',
+    fire: '#f5bf5bff',
+    grass: '#74f77dff',
+    electric: '#f3dc6aff',
+    water: '#7dcef3ff',
+    ground: '#a86725ff',
+    rock: '#68685fff',
+    fairy: '#e89df5ff',
     poison: '#98d7a5',
-    bug: '#f8d5a3',
-    dragon: '#97b3e6',
-    psychic: '#eaeda1',
-    flying: '#F5F5F5',
-    fighting: '#E6E0D4',
+    bug: '#eeba71ff',
+    dragon: '#76a3f5ff',
+    psychic: '#fa6dffff',
+    flying: '#80ffd4ff',
+    fighting: '#eb3131ff',
+    dark: '#602074ff',
+    ghost: '#acacacff',
     normal: '#F5F5F5'
 }
 
