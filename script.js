@@ -4,22 +4,24 @@ const searchBtn = document.querySelector("#searchBtn");
 const clearBtn = document.querySelector("#clearBtn");
 const pokemonCount = 1000;
 const colors = {
-    fire: '#f5bf5bff',
-    grass: '#74f77dff',
-    electric: '#f3dc6aff',
-    water: '#7dcef3ff',
-    ground: '#a86725ff',
-    rock: '#68685fff',
-    fairy: '#e89df5ff',
-    poison: '#98d7a5',
-    bug: '#eeba71ff',
-    dragon: '#76a3f5ff',
-    psychic: '#fa6dffff',
-    flying: '#80ffd4ff',
-    fighting: '#eb3131ff',
-    dark: '#602074ff',
-    ghost: '#acacacff',
-    normal: '#F5F5F5'
+    normal: '#A8A77A',
+fire: '#EE8130',
+water: '#6390F0',
+electric: '#F7D02C',
+grass: '#7AC74C',
+ice: '#96D9D6',
+fighting: '#C22E28',
+poison: '#A33EA1',
+ground: '#E2BF65',
+flying: '#A98FF3',
+psychic: '#F95587',
+bug: '#A6B91A',
+rock: '#B6A136',
+ghost: '#735797',
+dragon: '#6F35FC',
+dark: '#705746',
+steel: '#B7B7CE',
+fairy: '#D685AD'
 };
 
 const statNames = {
@@ -61,7 +63,6 @@ const createPokemonCard = (poke) => {
     const color = colors[type];
     card.style.backgroundColor = color;
     
-    // Criar HTML dos status em formato 2x3
     const statsHTML = poke.stats.map(stat => {
         const statName = statNames[stat.stat.name] || stat.stat.name.toUpperCase();
         const statValue = stat.base_stat;

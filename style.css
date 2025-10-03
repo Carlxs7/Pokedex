@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -14,27 +13,40 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 h1 {
-    letter-spacing: 5px;
+    font-size: 2.5rem;               
+    font-weight: 900;                 
+    letter-spacing: 4px;              
+    text-transform: uppercase;
+    background-color: black;
+    background-clip: text;    
+    text-align: center;
+    margin: 30px 0 40px;
+    position: relative;
 }
 
 .pokeContainer {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
+    align-items: stretch;
+    justify-content: center;
+    gap: 35px;
+    margin: 20px auto;
     max-width: 1200px;
-
+    width: 100%;
 }
 
 .pokemon {
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 15px;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    transition: transform 0.3s ease;
 }
 
 .imgContainer {
@@ -43,77 +55,86 @@ h1 {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    transition: transform 0.3s;
 }
 
-.imgContainer img{
-    max-width: 90%
+.pokemon:hover {
+    transform: scale(1.1);
 }
+
+.imgContainer img {
+    max-width: 90%;
+    height: auto;
+}
+
 
 .info {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 15px;
 }
 
 .number {
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0.15);
-    padding: 2px 13px;
+    padding: 4px 12px;
     border-radius: 10px;
     font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .nome {
-    margin: 15px 0 7px;
+    margin: 10px 0;
     letter-spacing: 1.5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
-.stats {
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.stats h4 {
-    margin: 0 0 10px 0;
-    font-size: 0.9em;
-    text-align: center;
-}
 
 .stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    padding: 10px;
+    padding: 15px 10px 5px;
+    margin-top: 15px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .stats h4 {
-    grid-column: 1 / -1; /* O título ocupa as 2 colunas */
-    margin: 0 0 5px 0;
+    grid-column: 1 / -1;
+    margin: 0 0 10px 0;
     font-size: 0.9em;
     text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .stat {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 8px;
-    background: rgba(255,255,255,0.2);
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     font-size: 0.75em;
 }
 
 .stat-name {
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .stat-value {
     font-weight: bold;
-    background: rgba(255,255,255,0.3);
-    padding: 2px 6px;
-    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 3px 8px;
+    border-radius: 4px;
 }
+
 
 .search-container {
     display: flex;
@@ -121,6 +142,7 @@ h1 {
     margin: 20px 0;
     max-width: 500px;
     width: 100%;
+    padding: 0 20px;
 }
 
 #searchInput {
@@ -131,14 +153,16 @@ h1 {
     font-size: 16px;
     font-family: 'Lato', sans-serif;
     outline: none;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 #searchInput:focus {
     border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
 }
 
-#searchBtn, #clearBtn {
+#searchBtn, 
+#clearBtn {
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
@@ -156,6 +180,11 @@ h1 {
 
 #searchBtn:hover {
     background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#searchBtn:active {
+    transform: scale(0.98);
 }
 
 #clearBtn {
@@ -165,4 +194,36 @@ h1 {
 
 #clearBtn:hover {
     background-color: #da190b;
+    transform: scale(1.05);
+}
+
+#clearBtn:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+    .pokemon {
+        flex: 0 1 calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .pokemon {
+        flex: 0 1 calc(50% - 20px);
+    }
+    
+    .search-container {
+        flex-direction: column;
+    }
+    
+    #searchBtn, 
+    #clearBtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .pokemon {
+        flex: 0 1 100%;
+    }
 }
