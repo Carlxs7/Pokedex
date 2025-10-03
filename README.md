@@ -6,7 +6,9 @@
 <h2>Veja uma pré-visualização do site !</h2>
 
 <br><br>
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/c6ef1d88-c58b-4a76-84f1-c5d3b6a14ec4" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/8b5f825a-88a9-4fd7-89a5-a0a618e9dee7" />
+
+
 
 </div>
 
