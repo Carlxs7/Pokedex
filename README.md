@@ -14,7 +14,7 @@
 <div align="center"><h1>✨ Funcionalidades </h1></div>
 
 <h1>
-🔍 Busca de Pokémons por nome ou número (CTRL+F)<br>
+🔍 Busca de Pokémons por nome ou número<br>
 🎨 Interface colorida <br>
 ⚡ Carregamento rápido e eficiente <br>
  </h1> 
